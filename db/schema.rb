@@ -10,7 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_25_023128) do
+ActiveRecord::Schema.define(version: 2019_11_26_023557) do
+
+  create_table "moods", force: :cascade do |t|
+    t.string "feeling"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "user_id"
+  end
+
+  create_table "quotes", force: :cascade do |t|
+    t.string "phrase"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "mood_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "name"
