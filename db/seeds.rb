@@ -7,3 +7,11 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.create(name: "Cat", username: "cat", password: "password")
+
+Mood.create(feeling: "sad")
+Mood.create(feeling: "happy")
+Mood.create(feeling: "great")
+
+Quote.create(phrase: "Don't be sad")
+Quote.create(phrase: "Stay happy")
+Quote.create(phrase: "Great is better than awesome")
