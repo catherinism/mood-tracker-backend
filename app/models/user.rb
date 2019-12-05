@@ -1,4 +1,4 @@
 class User < ApplicationRecord
     has_secure_password
-    has_many :moods
+    # has_many :moods
 end

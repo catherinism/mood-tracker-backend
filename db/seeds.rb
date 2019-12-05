@@ -12,6 +12,10 @@ Mood.create(feeling: "sad")
 Mood.create(feeling: "happy")
 Mood.create(feeling: "great")
 
-Quote.create(phrase: "Don't be sad")
-Quote.create(phrase: "Stay happy")
-Quote.create(phrase: "Great is better than awesome")
+# Quote.create(phrase: "Don't be sad")
+# Quote.create(phrase: "Stay happy")
+# Quote.create(phrase: "Great is better than awesome")
+
+20.times do
+    Quote.create(phrase: Faker::Quote.matz)
+end
