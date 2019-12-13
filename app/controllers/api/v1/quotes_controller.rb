@@ -6,7 +6,8 @@ class Api::V1::QuotesController < ApplicationController
     end
 
     def show
-        @quote = quote.find_by(id: params[:id])
+        @quote = Quote.find_by(id: params[:id])
+        render json: @quote
     end
 
     def create
@@ -15,6 +16,6 @@ class Api::V1::QuotesController < ApplicationController
 
     private
     def quote_params
-        params.require(:quote).permit(:phrase)
+        params.require(:quote).permit(:phrase, :mood_id)
     end
 end
