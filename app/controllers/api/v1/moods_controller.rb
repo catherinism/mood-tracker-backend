@@ -16,7 +16,7 @@ class Api::V1::MoodsController < ApplicationController
 
     private
     def mood_params
-      params.require(:mood).permit(:feeling)
+      params.require(:mood).permit(:feeling, :url)
     end
 
 end
